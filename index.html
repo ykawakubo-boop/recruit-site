@@ -23,7 +23,7 @@
 
   <div class="flex min-h-screen w-full">
 
-    <!-- サイドバーコンポーネ出し (ロゴもこの中に含まれます) -->
+    <!-- サイドバーコンポーネントの呼び出し -->
     <sidebar-component base-path="."></sidebar-component>
 
     <!-- メインコンテンツ (レフトナビの右側に配置) -->
@@ -304,17 +304,17 @@
               
               <div class="grid grid-cols-2 gap-4">
                 <div class="space-y-4">
-                  <!-- top_1.jpg を設定 (写真上の黒背景と説明文字を削除しました) -->
+                  <!-- top_1.jpg から 大文字の top_1.JPG へ変更 -->
                   <div class="bg-slate-200 aspect-[4/3] rounded-xl flex items-center justify-center relative overflow-hidden group">
                      <img src="images/top_1.JPG" alt="お昼休憩" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x300/e2e8f0/475569?text=Lunch'">
                   </div>
-                  <!-- top_2.jpg を設定 (写真上の黒背景と説明文字を削除しました) -->
+                  <!-- top_2.jpg を設定 -->
                   <div class="bg-slate-200 aspect-square rounded-xl flex items-center justify-center relative overflow-hidden group">
                      <img src="images/top_2.jpg" alt="社内勉強会" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/e2e8f0/475569?text=Study'">
                   </div>
                 </div>
                 <div class="space-y-4 pt-8">
-                  <!-- top_3.jpg を設定 (写真上の黒背景と説明文字を削除しました) -->
+                  <!-- top_3.jpg を設定 -->
                   <div class="bg-slate-200 aspect-square rounded-xl flex items-center justify-center relative overflow-hidden group">
                      <img src="images/top_3.jpg" alt="ミーティング" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/e2e8f0/475569?text=Meeting'">
                   </div>
@@ -335,8 +335,8 @@
       <section class="py-24 px-6 bg-white border-t border-slate-200 relative">
         
         <div class="max-w-6xl mx-auto relative">
-          <!-- キャラクター画像（『ポジティブな方』カードの上にあたる位置に右寄せ調整） -->
-          <div class="absolute -top-12 left-[3%] sm:left-[6%] md:left-[8%] w-16 sm:w-24 md:w-32 pointer-events-none z-10">
+          <!-- 修正箇所：キャラクター画像（スマホでは「We are looking for...」の上部に中央寄せ、sm以上では左上に絶対配置にレスポンシブ化） -->
+          <div class="relative sm:absolute top-0 sm:-top-12 left-0 sm:left-[6%] md:left-[8%] w-16 sm:w-24 md:w-32 mx-auto sm:mx-0 pointer-events-none z-10 mb-4 sm:mb-0">
             <img src="images/仲良し.png" alt="キャラクターイラスト" class="w-full h-auto object-contain drop-shadow-md" onerror="this.src='https://placehold.co/200x150/e2e8f0/475569?text=Nakayoshi'">
           </div>
 
@@ -482,7 +482,7 @@
         </div>
       </section>
 
-      <!-- フッターコンポーネ出し -->
+      <!-- フッターコンポーネントの呼び出し -->
       <footer-component base-path="."></footer-component>
 
     </main>
