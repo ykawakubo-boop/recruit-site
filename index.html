@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DESIGN CAREERS | 採用情報</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    /* サイドバーのスクロールバーカスタマイズ用 */
+    sidebar-component aside::-webkit-scrollbar {
+      width: 4px;
+    }
+    sidebar-component aside::-webkit-scrollbar-thumb {
+      background: #e2e8f0;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 overflow-x-hidden selection:bg-blue-600 selection:text-white">
+
+  <div class="flex min-h-screen w-full">
+
+    <!-- サイドバーコンポーネ出し (ロゴもこの中に含まれます) -->
+    <sidebar-component base-path="."></sidebar-component>
+
+    <!-- メインコンテンツ (レフトナビの右側に配置) -->
+    <main class="flex-1 lg:ml-72 flex flex-col w-full pt-16 lg:pt-0 relative">
+      
+      <!-- Hero Section -->
+      <section class="relative py-20 lg:py-28 min-h-[85vh] flex items-center overflow-hidden" style="background-color: #C7FF00;">
+        <!-- 左側背景（ブルー） - 斜めの幾学切り返し -->
+        <div class="absolute inset-0 w-[100%] md:w-[65%] lg:w-[60%] h-full z-0 transition-all duration-500" 
+             style="background-color: #27A6FF; clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);">
+        </div>
+        
+        <div class="px-6 md:px-12 lg:px-16 xl:px-20 w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
+          
+          <!-- 左側：テキストエリア -->
+          <div class="space-y-8 text-center md:text-left">
+            <div class="inline-block bg-white text-blue-600 font-bold px-4 py-1.5 rounded-full text-sm tracking-widest shadow-sm">
+              デザイン職採用サイト
+            </div>
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 leading-tight tracking-tight drop-shadow-sm">
+              モヤモヤを、<br />
+              ワクワクに。
+            </h1>
+            <p class="text-slate-900 font-semibold text-lg sm:text-xl leading-relaxed mx-auto md:mx-0 max-w-md">
+              ビジネスのお悩みを、デザインで解決する。<br />
+              理想を形にするアイデアと表現力で、<br />
+              ワクワクするクリエイティブを共に創りませんか？
+            </p>
+          </div>
+
+          <!-- 右側：メイン画像 (TOP.png) -->
+          <div class="flex justify-center md:justify-start relative mt-8 md:mt-0 md:-ml-8 lg:-ml-16">
+            <div class="relative w-full max-w-lg z-10">
+               <!-- プレビュー環境用にonerrorを設定しています -->
+               <img src="images/TOP.png" alt="メインビジュアル" class="w-full h-auto object-contain drop-shadow-2xl" onerror="this.src='https://placehold.co/800x600/e2e8f0/475569?text=Hero+Image'">
+            </div>
+            <!-- 画像の背景装飾 -->
+            <div class="absolute bottom-10 -left-8 lg:-left-20 w-32 h-32 bg-white/20 backdrop-blur-md rounded-full shadow-lg z-0 animate-pulse hidden md:block"></div>
+            <div class="absolute top-10 right-10 w-16 h-16 bg-white/40 backdrop-blur-md rounded-full shadow-md z-0 animate-bounce hidden md:block"></div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Mission Section -->
+      <section id="mission" class="py-24 px-6 md:px-12 lg:px-20 relative" style="background-color: #C7FF00;">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row gap-12 items-stretch">
+          <div class="md:w-1/3 text-center md:text-left flex flex-col justify-between">
+            <div>
+              <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight mb-4 tracking-tight">Our<br />Mission</h2>
+              <p class="font-bold text-lg text-slate-700 border-l-4 border-slate-900 pl-4 py-1 mx-auto md:mx-0 w-fit md:w-auto">デザイングループが目指していること</p>
+            </div>
+            <!-- mission.png 写真 -->
+            <div class="mt-8 relative rounded-2xl overflow-hidden shadow-lg transform md:-rotate-3 group">
+              <div class="absolute inset-0 bg-blue-600/10 group-hover:bg-transparent transition-colors duration-300 z-10"></div>
+              <img src="images/mission.png" alt="Missionのイメージ" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/e2e8f0/475569?text=Mission+Photo'">
+            </div>
+          </div>
+          <div class="md:w-2/3 bg-white text-slate-800 p-8 sm:p-12 rounded-2xl shadow-xl relative border border-slate-100 flex flex-col justify-center">
+            <div class="absolute -top-6 -right-6 w-14 h-14 rounded-xl flex items-center justify-center shadow-lg transform rotate-6" style="background-color: #27A6FF;">
+              <i data-lucide="search" class="w-6 h-6 text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-6 text-slate-900">「どうしたらいい？」に答えを。</h3>
+            <p class="text-base sm:text-lg leading-loose text-slate-600">
+              ビジネスの現場に溢れるモヤモヤ。私たちの役割は、その悩みに寄り添いデザインで答えを出すことです。<br />
+              オンラインストア of バナー制作やサイト更新といった日々の運用から、UI/UXデザイン、データ分析に基づく改善提案まで。<br class="hidden sm:block" />ただ「作る」だけでなく、その先の利用者を「楽しませる」ことを大切にしています。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Values Section -->
+      <section id="values" class="py-24 px-6 md:px-12 lg:px-20 relative" style="background-color: #27A6FF;">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight">Our Values</h2>
+            <p class="font-bold text-lg text-blue-100">わたしたちの強み</p>
+          </div>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-8 xl:p-10 rounded-2xl shadow-xl hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
+              <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-6 bg-slate-100 text-blue-600">
+                <i data-lucide="monitor-play" class="w-7 h-7"></i>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-4">一気通貫の体制</h3>
+              <p class="leading-relaxed text-slate-600 text-sm md:text-base">
+                撮影、企画、制作、精度運用までを自社で完結。デザインのその先にある成果まで肌で感じることができます。
+              </p>
+            </div>
+            <div class="bg-white p-8 xl:p-10 rounded-2xl shadow-xl hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
+              <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-6 bg-slate-100 text-blue-600">
+                <i data-lucide="zap" class="w-7 h-7"></i>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-4">豊富な実績</h3>
+              <p class="leading-relaxed text-slate-600 text-sm md:text-base">
+                100社以上のファッションECを支えてきた実績。多様なブランドの課題解決を通じて、ノウハウが蓄積されています。
+              </p>
+            </div>
+            <div class="bg-white p-8 xl:p-10 rounded-2xl shadow-xl hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
+              <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-6 bg-slate-100 text-blue-600">
+                <i data-lucide="users" class="w-7 h-7"></i>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-4">チームの総合力</h3>
+              <p class="leading-relaxed text-slate-600 text-sm md:text-base">
+                デザイナー、ディレクター、コーダーが密に連携。個人のスキルアップと共にチーム全体で高品質なクリエイティブを生み出します。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Target Positions (CSSベン図版) -->
+      <section id="positions" class="py-24 px-6 md:px-12 lg:px-20 border-y border-slate-200 overflow-hidden" style="background-color: #c4c8cb;">
+        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+          
+          <!-- 左側：テキストエリア -->
+          <div class="lg:w-1/3 space-y-8 relative z-10 text-center lg:text-left">
+            <div class="mb-4">
+              <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-2 tracking-tight">Target<br class="hidden lg:block"/> Positions</h2>
+              <p class="font-bold text-lg text-slate-700">目指すポジション</p>
+            </div>
+            <p class="text-slate-900 leading-loose text-base md:text-lg font-medium">
+              まずは、WEBデザイン、ECビジネス、システム、それぞれの側面から知識を身に着けた「<strong class="text-slate-900 text-xl font-extrabold border-b-2 border-slate-900 pb-0.5">ECデザイナー</strong>」を目指します。<br /><br />
+              デザインだけに留まらず、あらゆる知識を蓄えることで、将来的にキャリアパスをディレクターやUI/UXなど多方面へ広げられます。
+            </p>
+          </div>
+
+          <!-- 右側：ベン図エリア -->
+          <div class="lg:w-2/3 w-full flex justify-center mt-10 lg:mt-0">
+            <!-- 図のコンテナ (アスペクト比1:1を維持して文字崩れを防ぐ) -->
+            <div class="relative w-full max-w-[500px] aspect-square text-[10px] sm:text-xs md:text-sm font-bold text-slate-900 select-none">
+              
+              <!-- 背景の透かし文字 (Z-indexを上げて円の上に表示) -->
+              <div class="absolute top-[2%] left-1/2 -translate-x-1/2 text-3xl sm:text-4xl md:text-5xl text-white font-extrabold tracking-wider z-20 opacity-100 drop-shadow-md">Business</div>
+              <div class="absolute bottom-[2%] left-[5%] text-3xl sm:text-4xl md:text-5xl text-white font-extrabold tracking-wider z-20 opacity-100 drop-shadow-md">Design</div>
+              <div class="absolute bottom-[2%] right-[5%] text-3xl sm:text-4xl md:text-5xl text-white font-extrabold tracking-wider z-20 opacity-100 drop-shadow-md">System</div>
+
+              <!-- ベン図の円グループ -->
+              <div class="absolute inset-0 z-10 flex items-center justify-center">
+                <div class="relative w-[85%] h-[85%]">
+                  
+                  <!-- Business Circle (黄) -->
+                  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[65%] h-[65%] rounded-full mix-blend-multiply opacity-90" style="background-color: #fced5c;"></div>
+                  
+                  <!-- Design Circle (ピンク) -->
+                  <div class="absolute bottom-0 left-0 w-[65%] h-[65%] rounded-full mix-blend-multiply opacity-90" style="background-color: #fca5c5;"></div>
+                  
+                  <!-- System Circle (水色) -->
+                  <div class="absolute bottom-0 right-0 w-[65%] h-[65%] rounded-full mix-blend-multiply opacity-90" style="background-color: #52cffd;"></div>
+                  
+                  <!-- 中央の点の配置 (位置を微調整) -->
+                  <div class="absolute top-[53%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 flex items-center justify-center pointer-events-none">
+                    <div class="w-3 h-3 bg-slate-900 rounded-full"></div>
+                  </div>
+
+                  <!-- テキストと点 -->
+                  <div class="absolute inset-0 z-30 pointer-events-none tracking-tight">
+                    <!-- Business内 -->
+                    <div class="absolute top-[18%] left-[28%] text-center transform -translate-x-1/2">
+                      <div class="w-1.5 h-1.5 bg-slate-900 rounded-full mx-auto mb-1"></div>
+                      アカウント<br/>マネージャー
+                    </div>
+                    <div class="absolute top-[18%] right-[28%] text-center transform translate-x-1/2">
+                      <div class="w-1.5 h-1.5 bg-slate-900 rounded-full mx-auto mb-1"></div>
+                      マーケター
+                    </div>
+                    <div class="absolute top-[35%] left-1/2 -translate-x-1/2 text-center">
+                      <div class="w-1.5 h-1.5 bg-slate-900 rounded-full mx-auto mb-1"></div>
+                      プランナー
+                    </div>
+
+                    <!-- Design内 -->
+                    <div class="absolute bottom-[35%] left-[8%] text-center">
+                      <div class="w-1.5 h-1.5 bg-slate-900 rounded-full mx-auto mb-1"></div>
+                      グラフィック<br/>デザイナー
+                    </div>
+                    <div class="absolute bottom-[18%] left-[22%] text-center">
+                      <div class="w-1.5 h-1.5 bg-slate-900 rounded-full mx-auto mb-1"></div>
+                      WEBデザイナー
+                    </div>
+
+                    <!-- System内 -->
+                    <div class="absolute bottom-[25%] right-[12%] text-center">
+                      <div class="w-1.5 h-1.5 bg-slate-900 rounded-full mx-auto mb-1"></div>
+                      フロントエンド<br/>エンジニア
+                    </div>
+
+                    <!-- 交差部分 (ディレクター) -->
+                    <div class="absolute top-[48%] left-[22%] text-center">
+                      <div class="w-1.5 h-1.5 bg-slate-900 rounded-full mx-auto mb-1"></div>
+                      ディレクター
+                    </div>
+
+                    <!-- 交差部分 (WEBディレクター) -->
+                    <div class="absolute top-[44%] right-[18%] text-center">
+                      <div class="w-1.5 h-1.5 bg-slate-900 rounded-full mx-auto mb-1"></div>
+                      WEBディレクター
+                    </div>
+
+                    <!-- 交差部分 (コーダー / UI/UX) -->
+                    <div class="absolute bottom-[28%] left-[58%] -translate-x-1/2 text-center">
+                      <div class="w-1.5 h-1.5 bg-slate-900 rounded-full mx-auto mb-1"></div>
+                      コーダー
+                    </div>
+                    <div class="absolute bottom-[12%] left-[42%] -translate-x-1/2 text-center">
+                      <div class="w-1.5 h-1.5 bg-slate-900 rounded-full mx-auto mb-1"></div>
+                      UI/UXデザイナー
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- 中央の点に向かう線 (SVG) -->
+              <svg class="absolute inset-0 w-full h-full pointer-events-none z-40" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+                <line x1="35" y1="42" x2="50" y2="53" stroke="#0f172a" stroke-width="0.6" />
+              </svg>
+
+              <!-- ECデザイナー アノテーション文字 -->
+              <div class="absolute top-[37%] left-[2%] sm:left-[5%] z-40">
+                <span class="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">ECデザイナー</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Career & Culture -->
+      <section id="career" class="py-24 px-6 md:px-12 lg:px-20 bg-slate-50">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid lg:grid-cols-2 gap-16">
+            
+            <!-- 研修・育成制度 -->
+            <div>
+              <div class="mb-10">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-2 tracking-tight">Career</h2>
+                <p class="font-bold text-blue-600">研修・育成制度</p>
+              </div>
+              <p class="text-slate-600 mb-8 leading-relaxed">
+                当社では、社員それぞれが活躍できる環境づくりとして、様々な研修や育成制度を用意しています。配属部署も希望に応じて柔軟に対応しています。
+              </p>
+
+              <div class="space-y-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 flex gap-4">
+                  <div class="bg-blue-100 p-3 rounded-lg text-blue-600 h-fit"><i data-lucide="graduation-cap" class="w-6 h-6"></i></div>
+                  <div>
+                    <h4 class="font-bold text-slate-900 mb-2">入社前 〜 入社後</h4>
+                    <ul class="text-sm text-slate-600 space-y-2">
+                      <li>· 入社前交流会／研修（任意）</li>
+                      <li>· 各種オリエンテーション</li>
+                      <li>· 業務講習</li>
+                      <li>· メンター制度でのサポート</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 flex gap-4">
+                  <div class="bg-lime-100 p-3 rounded-lg text-lime-700 h-fit"><i data-lucide="users" class="w-6 h-6"></i></div>
+                  <div>
+                    <h4 class="font-bold text-slate-900 mb-2">その他・キャリアパス</h4>
+                    <ul class="text-sm text-slate-600 space-y-2">
+                      <li>· 検定取得補助制度 / キャリア相談・面談</li>
+                      <li>· 得意分野を活かしたポジショニング</li>
+                      <li class="text-xs text-slate-500 mt-2 pl-2">└ チームリーダー / 品質管理リーダー / 指導リーダー / Webディレクター / UI/UXデザイナー</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 社内の雰囲気 -->
+            <div>
+              <div class="mb-10">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-2 tracking-tight">Culture</h2>
+                <p class="font-bold text-blue-600">社内の雰囲気</p>
+              </div>
+              
+              <div class="grid grid-cols-2 gap-4">
+                <div class="space-y-4">
+                  <!-- top_1.jpg を設定 (写真上の黒背景と説明文字を削除しました) -->
+                  <div class="bg-slate-200 aspect-[4/3] rounded-xl flex items-center justify-center relative overflow-hidden group">
+                     <img src="images/top_1.jpg" alt="お昼休憩" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x300/e2e8f0/475569?text=Lunch'">
+                  </div>
+                  <!-- top_2.jpg を設定 (写真上の黒背景と説明文字を削除しました) -->
+                  <div class="bg-slate-200 aspect-square rounded-xl flex items-center justify-center relative overflow-hidden group">
+                     <img src="images/top_2.jpg" alt="社内勉強会" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/e2e8f0/475569?text=Study'">
+                  </div>
+                </div>
+                <div class="space-y-4 pt-8">
+                  <!-- top_3.jpg を設定 (写真上の黒背景と説明文字を削除しました) -->
+                  <div class="bg-slate-200 aspect-square rounded-xl flex items-center justify-center relative overflow-hidden group">
+                     <img src="images/top_3.jpg" alt="ミーティング" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/e2e8f0/475569?text=Meeting'">
+                  </div>
+                  <div class="bg-blue-100 aspect-[4/3] rounded-xl flex items-center justify-center p-6 text-center">
+                    <p class="text-blue-800 font-bold text-sm leading-relaxed">
+                      コミュニケーションを大切にし、風通しの良い環境です。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- We are looking for... -->
+      <section class="py-24 px-6 bg-white border-t border-slate-200 relative">
+        
+        <div class="max-w-6xl mx-auto relative">
+          <!-- キャラクター画像（『ポジティブな方』カードの上にあたる位置に右寄せ調整） -->
+          <div class="absolute -top-12 left-[3%] sm:left-[6%] md:left-[8%] w-16 sm:w-24 md:w-32 pointer-events-none z-10">
+            <img src="images/仲良し.png" alt="キャラクターイラスト" class="w-full h-auto object-contain drop-shadow-md" onerror="this.src='https://placehold.co/200x150/e2e8f0/475569?text=Nakayoshi'">
+          </div>
+
+          <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">We are looking for...</h2>
+            <p class="font-bold text-lg text-slate-500">こんな人を求めています</p>
+          </div>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="p-6 xl:p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-blue-200 hover:bg-blue-50 transition-colors">
+              <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mb-6">
+                <i data-lucide="coffee" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-3">ポジティブな方</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                コミュニケーションを大切にし、何でも楽しんで取り組むチャレンジ精神のある方。前向きで成長意欲が高い方。
+              </p>
+            </div>
+            <div class="p-6 xl:p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-blue-200 hover:bg-blue-50 transition-colors">
+              <div class="w-12 h-12 rounded-full bg-lime-100 flex items-center justify-center text-lime-700 mb-6">
+                <i data-lucide="user-check" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-3">主体性のある方</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                売上に繋げるための設計を自ら考え、提案できるデザイナーになれるよう、主体性をもって業務に取り組める方。
+              </p>
+            </div>
+            <div class="p-6 xl:p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-blue-200 hover:bg-blue-50 transition-colors">
+              <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mb-6">
+                <i data-lucide="search" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-3">幅広い探求心のある方</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                クライアントのブランド価値向上の一助となれるように、幅広い視野でトレンドを取り入れられる方。
+              </p>
+            </div>
+            <div class="p-6 xl:p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-blue-200 hover:bg-blue-50 transition-colors">
+              <div class="w-12 h-12 rounded-full bg-lime-100 flex items-center justify-center text-lime-700 mb-6">
+                <i data-lucide="check-circle" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-3">誠実さ</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                クライアントの売上損失等を防ぐために、日々の細かい作業も抜かりなく取り組める誠実な方。
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Interview Section -->
+      <section id="interview" class="py-24 px-6 md:px-12 lg:px-20 bg-slate-100 border-t border-slate-200">
+        <div class="max-w-5xl mx-auto">
+          <div class="mb-12">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-2 tracking-tight">Interview</h2>
+            <p class="font-bold text-lg text-slate-500">デザイナーインタビュー</p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+            <a href="interview/interview_2019.html" class="group flex flex-col sm:flex-row bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-slate-200">
+              <div class="sm:w-2/5 bg-slate-200 aspect-square sm:aspect-auto relative overflow-hidden">
+                <div class="absolute inset-0 bg-blue-900/10 group-hover:bg-transparent transition-colors z-10"></div>
+                <!-- 写真を設定 -->
+                <img src="images/interview2019_1.jpg" alt="関 夏美" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/e2e8f0/475569?text=関+夏美'">
+              </div>
+              <div class="sm:w-3/5 p-6 md:p-8 flex flex-col justify-center">
+                <div class="text-xs font-bold text-blue-600 mb-2">2019年 新卒入社</div>
+                <h3 class="text-xl font-extrabold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors">
+                  関 夏美
+                </h3>
+                <div class="mt-auto flex items-center text-sm font-bold text-slate-500 group-hover:text-blue-600 transition-colors">
+                  インタビューを読む <i data-lucide="chevron-right" class="ml-1 w-4 h-4"></i>
+                </div>
+              </div>
+            </a>
+            <a href="interview/interview_2018.html" class="group flex flex-col sm:flex-row bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-slate-200">
+              <div class="sm:w-2/5 bg-slate-200 aspect-square sm:aspect-auto relative overflow-hidden">
+                <div class="absolute inset-0 bg-blue-900/10 group-hover:bg-transparent transition-colors z-10"></div>
+                <div class="w-full h-full flex items-center justify-center text-slate-400 bg-slate-300 text-sm">
+                  [Photo]
+                </div>
+              </div>
+              <div class="sm:w-3/5 p-6 md:p-8 flex flex-col justify-center">
+                <div class="text-xs font-bold text-lime-600 mb-2">2018年 新卒入社</div>
+                <h3 class="text-xl font-extrabold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors">
+                  太田 早紀
+                </h3>
+                <div class="mt-auto flex items-center text-sm font-bold text-slate-500 group-hover:text-blue-600 transition-colors">
+                  インタビューを読む <i data-lucide="chevron-right" class="ml-1 w-4 h-4"></i>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA / Join Us -->
+      <section id="join" class="py-24 px-6 md:px-12 lg:px-20 relative overflow-hidden"
+        style="background: linear-gradient(-110deg, #C7FF00 50%, #27A6FF 50%);"
+      >
+        <div class="max-w-5xl mx-auto relative z-10 bg-white p-8 sm:p-12 lg:p-16 rounded-2xl shadow-2xl border border-white">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-6 leading-tight tracking-tight">
+              モヤモヤを、ワクワクに変える<br />
+              仲間を募集しています！
+            </h2>
+            <p class="text-slate-600 font-medium text-base md:text-lg">
+              ポジション毎での採用を実施しています。<br class="hidden md:block" />ご希望やご経験に合わせてポジションをご選択ください。
+            </p>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-slate-50 p-6 sm:p-8 rounded-xl border border-slate-200 flex flex-col h-full">
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-2 border-b-2 border-blue-600 inline-block pb-1 w-fit">新卒採用</h3>
+              <p class="text-slate-500 text-sm mb-8">【札幌本社】</p>
+              <div class="mt-auto space-y-3">
+                <a href="https://recruit.jobcan.jp/diamondhead/job_offers/2197383" target="_blank" rel="noopener noreferrer" class="w-full bg-blue-600 text-white px-6 py-4 rounded-md font-bold hover:bg-blue-700 transition shadow-sm flex justify-between items-center group text-sm sm:text-base block">
+                  募集要項・エントリー
+                  <i data-lucide="chevron-right" class="w-5 h-5 group-hover:translate-x-1 transition"></i>
+                </a>
+                <a href="https://recruit.jobcan.jp/diamondhead/job_offers/1462258" target="_blank" rel="noopener noreferrer" class="w-full bg-white border border-slate-300 text-slate-700 px-6 py-3 rounded-md font-bold hover:bg-slate-50 transition flex justify-between items-center group text-sm sm:text-base block">
+                  会社説明会
+                  <i data-lucide="chevron-right" class="w-5 h-5 text-slate-400 group-hover:translate-x-1 transition"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="bg-slate-50 p-6 sm:p-8 rounded-xl border border-slate-200 flex flex-col h-full">
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-2 border-b-2 border-lime-500 inline-block pb-1 w-fit">中途採用・業務委託</h3>
+              <p class="text-slate-500 text-sm mb-8">【札幌本社・東京本社】· 業務委託</p>
+              <div class="mt-auto space-y-3">
+                <a href="https://recruit.jobcan.jp/diamondhead/list?category_id=13413" target="_blank" rel="noopener noreferrer" class="w-full bg-slate-900 text-white px-6 py-4 rounded-md font-bold hover:bg-slate-800 transition shadow-sm flex justify-between items-center group text-sm sm:text-base block">
+                  募集要項・エントリー
+                  <i data-lucide="chevron-right" class="w-5 h-5 group-hover:translate-x-1 transition"></i>
+                </a>
+                <a href="outsourcing.html" class="w-full bg-white border border-slate-300 text-slate-700 px-6 py-3 rounded-md font-bold hover:bg-slate-50 transition flex justify-between items-center group text-sm sm:text-base block">
+                  業務委託契約の情報
+                  <i data-lucide="chevron-right" class="w-5 h-5 text-slate-400 group-hover:translate-x-1 transition"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- フッターコンポーネ出し -->
+      <footer-component base-path="."></footer-component>
+
+    </main>
+  </div>
+
+  <!-- ローカル環境用のJS読み込み -->
+  <script src="components/sidebar.js"></script>
+  <script src="components/footer.js"></script>
+  
+
+  <!-- Canvasプレビュー用フォールバックコード -->
+  <script>
+    setTimeout(() => {
+      // サイドバーが外部JSから読み込めていなければ定義
+      if (!customElements.get('sidebar-component')) {
+        class SidebarComponentFallback extends HTMLElement {
+          connectedCallback() {
+            const basePath = this.getAttribute('base-path') || '.';
+            this.innerHTML = `
+              <header id="mobile-header" class="lg:hidden fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md z-40 border-b border-slate-200 px-5 py-3 flex justify-between items-center shadow-sm">
+                <a href="${basePath}/index.html" class="flex flex-col items-center text-center">
+                  <img src="${basePath}/images/透過.png" alt="Diamond head DESIGN" class="h-10 w-auto object-contain mb-0.5" onerror="this.src='https://placehold.co/160x40/e2e8f0/475569?text=LOGO'">
+                  <span class="block text-[8px] font-bold text-slate-700 tracking-[0.1em] leading-tight">
+                    DESIGN CAREERS
+                  </span>
+                </a>
+                <button id="menu-toggle" class="text-blue-600 font-bold text-sm tracking-widest focus:outline-none">
+                  MENU
+                </button>
+              </header>
+              <aside id="left-nav" class="w-72 h-screen fixed top-0 left-0 bg-white border-r border-slate-200 z-50 flex flex-col py-10 px-8 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 overflow-y-auto">
+                <a href="${basePath}/index.html" class="block text-center mb-12">
+                  <img src="${basePath}/images/透過.png" alt="Diamond head DESIGN" class="w-full max-w-[200px] h-auto mx-auto object-contain mb-4" onerror="this.src='https://placehold.co/200x50/e2e8f0/475569?text=LOGO'">
+                  <span class="block text-xs font-bold text-slate-700 tracking-[0.15em] leading-tight text-center">DESIGN CAREERS</span>
+                </a>
+                <nav class="flex-grow">
+                  <ul class="space-y-6">
+                    <li><a href="${basePath}/index.html" class="flex items-center justify-between text-sm font-bold text-slate-800 hover:text-blue-600 transition group">HOME <i data-lucide="chevron-right" class="w-4 h-4 text-slate-300 group-hover:text-blue-600 transition"></i></a></li>
+                    <li class="group">
+                      <a href="#" class="flex items-center justify-between text-sm font-bold text-slate-800 hover:text-blue-600 transition">インタビュー <i data-lucide="chevron-right" class="w-4 h-4 text-slate-300 group-hover:text-blue-600 group-hover:rotate-90 transition-transform duration-300"></i></a>
+                      <ul class="hidden group-hover:block pl-4 mt-3 space-y-3 border-l-2 border-slate-100 ml-2">
+                        <li><a href="${basePath}/interview/interview_2019.html" class="block text-sm font-medium text-slate-600 hover:text-blue-600 transition">2019年新卒入社</a></li>
+                        <li><a href="${basePath}/interview/interview_2018.html" class="block text-sm font-medium text-slate-600 hover:text-blue-600 transition">2018年新卒入社</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="${basePath}/outsourcing.html" class="flex items-center justify-between text-sm font-bold text-slate-800 hover:text-blue-600 transition group">業務委託契約 <i data-lucide="chevron-right" class="w-4 h-4 text-slate-300 group-hover:text-blue-600 transition"></i></a></li>
+                    <li><a href="https://design.diamondhead.jp/works/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between text-sm font-bold text-slate-800 hover:text-blue-600 transition group">制作事例 <i data-lucide="external-link" class="w-4 h-4 text-slate-300 group-hover:text-blue-600 transition"></i></a></li>
+                  </ul>
+                </nav>
+              </aside>
+            `;
+            const menuToggle = this.querySelector('#menu-toggle');
+            const leftNav = this.querySelector('#left-nav');
+            if (menuToggle && leftNav) {
+              menuToggle.addEventListener('click', () => {
+                leftNav.classList.toggle('-translate-x-full');
+                if (leftNav.classList.contains('-translate-x-full')) {
+                  menuToggle.textContent = 'MENU'; menuToggle.classList.remove('text-slate-800'); menuToggle.classList.add('text-blue-600');
+                } else {
+                  menuToggle.textContent = 'CLOSE'; menuToggle.classList.remove('text-blue-600'); menuToggle.classList.add('text-slate-800');
+                }
+              });
+              this.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', (e) => {
+                  if (link.getAttribute('href') === '#') {
+                    e.preventDefault();
+                    const subMenu = link.nextElementSibling;
+                    if (subMenu && subMenu.tagName === 'UL') {
+                      subMenu.style.display = subMenu.style.display === 'block' ? '' : 'block';
+                    }
+                    return;
+                  }
+                  if (window.innerWidth < 1024) {
+                    leftNav.classList.add('-translate-x-full'); menuToggle.textContent = 'MENU'; menuToggle.classList.remove('text-slate-800'); menuToggle.classList.add('text-blue-600');
+                  }
+                });
+              });
+            }
+          }
+        }
+        customElements.define('sidebar-component', SidebarComponentFallback);
+      }
+
+      // フッター定義
+      if (!customElements.get('footer-component')) {
+        class FooterComponentFallback extends HTMLElement {
+          connectedCallback() {
+            const basePath = this.getAttribute('base-path') || '.';
+            this.innerHTML = `
+              <footer class="bg-slate-900 text-slate-300 pt-12 pb-8 px-6 md:px-12 lg:px-20">
+                <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 mb-8">
+                  <div class="flex flex-wrap justify-center md:justify-start gap-6 font-medium text-sm">
+                    <a href="#" class="hover:text-white transition">CORPORATE SITE</a>
+                    <a href="#" class="hover:text-white transition">CSR</a>
+                    <a href="#" class="hover:text-white transition">CONTACT</a>
+                  </div>
+                  <div class="text-sm text-slate-500">© Diamond head Co., Ltd.</div>
+                </div>
+                <div class="max-w-7xl mx-auto flex justify-end border-t border-slate-800 pt-6">
+                  <a href="https://www.scsk.jp/" target="_blank" class="block bg-white/90 p-2 rounded-md hover:opacity-80 transition-opacity">
+                    <img src="${basePath}/images/scsk_black.png" alt="SCSK" class="w-[90px] h-auto object-contain" onerror="this.src='https://placehold.co/90x30/fff/000?text=SCSK'">
+                  </a>
+                </div>
+              </footer>
+            `;
+          }
+        }
+        customElements.define('footer-component', FooterComponentFallback);
+      }
+
+      // 最後にアイコンを生成
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+    }, 100);
+  </script>
+</body>
+</html>
